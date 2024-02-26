@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <h1 id="h1" style="color: aliceblue;">Welcome To Control Grade</h1>
+    <input style="width: 20vw; border-color: aliceblue; border-width: 10px; color: beige;" type="text" id="input">
+    <div style="color: white; font-size: 2cm;" id="display"></div>
+    <br>
+    <button style="border-color: azure; border-width: 10px; color: azure;" onclick="start()">GRADE</button>
+    <div id="disp" class="text-danger"></div>
+    <script>
+     function start(){
+        var score = input.value
+        if(score<=0){
+            document.getElementById("display").innerText="input score"
+            disp.innerHTML = `
+            <img src="/background.png" alt=""> 
+            `
+        } else if(score>=101){
+           document.getElementById("display").innerText="invalid"
+           disp.innerHTML =`
+           <img src="/background.png" alt="">`
+        }else if(score <= 45){
+            document.getElementById("display").innerText="F-Fail"
+            disp.innerHTML=`
+            <img src="/F.jfif" alt="">`
+        }else if(score<= 55){
+            document.getElementById("display").innerText="E-PASS"
+            disp.innerHTML=`
+            <img src="/E.jfif" alt="">`
+        }else if(score<=65){
+            document.getElementById("display").innerText="D-AVERAGE"
+            disp.innerHTML=`
+            <img src="/D.jfif" alt="">`
+        }else if(score<=75){
+            document.getElementById("display").innerText="C-VERY GOOD"
+            disp.innerHTML=`
+            <img src="/c.png" alt="">`
+        }else if(score<=95){
+            document.getElementById("display").innerText="B-GOOD"
+            disp.innerHTML=`
+            <img src="/A.jfif" alt="">`
+        }else if(score<=100){
+            document.getElementById("display").innerText="A-EXCELLENT"
+            disp.innerHTML=`
+            <img src="/A1.png" alt="">`
+        }
+     }
+    </script>
+</body>
+</html> 
